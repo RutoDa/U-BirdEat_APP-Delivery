@@ -60,6 +60,14 @@ const Home = () => {
             </View>
           )}
 
+          {orders.length === 0 && !isLoading && (
+            <View className="container flex justify-center items-center mt-20 pt-20">
+              <Text className="text-lg font-semibold text-black">
+                目前沒有訂單
+              </Text>
+            </View>
+          )}
+
           {/* Loader */}
           {isLoading && (
             <View className="container flex justify-center items-center mt-20 pt-20">
